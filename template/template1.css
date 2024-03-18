@@ -10,6 +10,8 @@ body{
 .template-main{
     width:210mm;
     height: 297mm;
+    /* width:7.5in;
+    height:10.5in; */
     background-color: rgb(15, 13, 13);
     display: flex;
     justify-content: center;
@@ -27,8 +29,7 @@ body{
     height: 27.75cm;
     background-color: #b54141;
     margin-left: 50px;
-    display: grid;
-    gap: 10px;
+    
 }
 .img{
     width:5.42cm;
@@ -40,7 +41,8 @@ body{
     margin: auto;
     margin-top: 50px;
 }
-.name{    width: 5.49cm;
+.name{    
+    width: 5.49cm;
     height: 0.79cm;
     background-color: azure;
     margin: auto;
@@ -69,6 +71,11 @@ body{
 }
 .summary,.education,.experience,.projects,.certifications,.technical-skills{
     width: 10.37cm;
+    height: 5.33cm;
+    margin: 10px 0;
     background-color: aquamarine;
     
+}
+.summary{
+    margin: 0;
 }
