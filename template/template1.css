@@ -1,0 +1,67 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.template-main{
+    width:210mm;
+    height: 297mm;
+    background-color: rgb(15, 13, 13);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    padding: 50px;
+}
+.first{
+    width: 6.82cm;
+    height: 27.75cm;
+    background-color: #cab2b2;
+}
+.second{
+    width: 10.38cm;
+    height: 27.75cm;
+    background-color: #b54141;
+    margin-left: 50px;
+}
+.img{
+    width:5.42cm;
+    height: 5.42cm;
+    background-color: blue;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    margin-top: 50px;
+}
+.name{    width: 5.49cm;
+    height: 0.79cm;
+    background-color: azure;
+    margin: auto;
+    margin-top: 20px;
+}
+.links{
+    width: 5.07cm;
+    height: 5.33cm;
+    background-color: aquamarine;
+    margin: auto;
+    margin-top: 20px;
+}
+.about{
+    width: 5.07cm;
+    height: 5.33cm;
+    background-color: aquamarine;
+    margin: auto;
+    margin-top: 20px;
+}
+.skills{
+    width: 5.07cm;
+    height: 5.33cm;
+    background-color: aquamarine;
+    margin: auto;
+    margin-top: 20px;
+}
