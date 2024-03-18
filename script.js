@@ -69,32 +69,98 @@ $(document).ready(function() {
             var skill = $(this).val();
             skills.push(skill);
         });
+        var image = document.getElementById('image').files[0]; 
+        var imageElement = '';
+        if (image) {
+            var imageUrl = URL.createObjectURL(image);
+            imageElement = `<img src="${imageUrl}" alt="User Image" style=" width:5.42cm;
+            height: 5.42cm;">`;
+        } else {
+            imageElement = '<p>No image selected</p>';
+        }
+        
         var resumeContent = `
-            <html>
-            <head>
-                <title>Generated Resume</title>
-                <style>
-                    /* Add your custom styles here */
-                </style>
-            </head>
-            <body>
-                <h1>Resume</h1>
-                <p><strong>Full Name:</strong> ${fullName}</p>
-                <p><strong>Email:</strong> ${email}</p>
-                <p><strong>Phone:</strong> ${phone}</p>
-                <h2>Education</h2>
-                <ul>
-                    ${education.map(edu => `<li>${edu.degree} - ${edu.university}</li>`).join('')}
-                </ul>
-                <h2>Work Experience</h2>
-                <ul>
-                    ${experience.map(exp => `<li>${exp.jobTitle} at ${exp.company}</li>`).join('')}
-                </ul>
-                <h2>Skills</h2>
-                <p>${skills.join(', ')}</p>
-            </body>
-            </html>
+        <!DOCTYPE html>
+        <html lang="en">
+        <head>
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <title>Document</title>
+            <link rel="stylesheet" href="./template/template1.css">
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.9.2/html2pdf.bundle.min.js"></script>
+
+        </head>
+        <body>
+            <div class="template-main" id="main-form">
+                <div class="first">
+                    <div class="img">
+                        ${imageElement}
+                    </div>
+                    <div class="profile-section">
+                        <div class="name">
+                            ${fullName}
+                        </div>
+                        <div class="links">
+                            <a href="">${email}</a>
+                            <a href="">${phone}</a>
+                            <a href=""></a>
+                            <a href=""></a>
+                            <a href=""></a>
+                            <a href=""></a>
+                        </div>
+                        <div class="about">
+        
+                        </div>
+                        <div class="skills">
+                            ${skills.map(function(skill) {
+                                return `<div class="skill">${skill}</div>`;})}
+                        </div>
+                        <div class="language">
+        
+                        </div>
+                        
+                    </div>
+                </div>
+                <div class="second">
+                    <div class="summary">
+        
+                    </div>
+                    <div class="education">
+                    ${education.map(function(edu) {
+                        return `<div class="education-item">
+                            <div class="degree">${edu.degree}</div>
+                            <div class="university-name">${edu.university}</div>
+                        </div>`;})}
+                    </div>
+                    <div class="technical-skills">
+        
+                    </div>
+                    <div class="projects">
+        
+                    </div>
+                    <div class="certifications">
+                        
+                    </div>
+                </div>
+            </div>
+            <button id="downloadButton" onclick="printCV()">Download PDF</button>
+                        <script>
+                        document.getElementById('downloadButton').addEventListener('click', function() {
+                            const element = document.querySelector('.template-main');
+                            html2pdf()
+                                .from(element)
+                                .set({ format: 'A4', orientation: 'portrait' }) 
+                                .save();
+                        });
+                        </script>
+            <script src="/template/script1.js">
+                
+            </script>
+            <script src="../script.js"></script>
+        </body>
+        </html>
         `;
+       
         var resumePage = window.open();
         resumePage.document.open();
         resumePage.document.write(resumeContent);
@@ -103,3 +169,12 @@ $(document).ready(function() {
 
     $('#resumeForm').submit(generateResume);
 });
+
+function generateResume(event) {
+    let fullName = document.getElementById('fullName').value;
+    console.log(fullName);
+    
+}
+function printCV(){
+    window.print();
+}
