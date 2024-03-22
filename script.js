@@ -176,5 +176,5 @@ function generateResume(event) {
     
 }
 function printCV(){
-    window.print();
+    window.print('template-main');
 }
