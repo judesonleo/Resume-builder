@@ -31,11 +31,23 @@
                 <input type="text" class="form-control" id="address" placeholder="Enter your address">
             </div>
             <div class="form-group">
+                <label for="email">Linkdin</label>
+                <input type="url" class="form-control" id="linkdin" placeholder="Enter your Linkdin">
+            </div>
+            <div class="form-group">
+                <label for="email">Github address</label>
+                <input type="url" class="form-control" id="github" placeholder="Enter your github">
+            </div>
+            <div class="form-group">
+                <label for="email">Twitter address</label>
+                <input type="url" class="form-control" id="twitter" placeholder="Enter your Twitter">
+            </div>
+            <div class="form-group">
                 <label for="summary">Summary</label>
                 <textarea class="form-control" id="summary" rows="3" placeholder="Enter your summary"></textarea>
             </div>
             <div class="form-group">
-                <label for="image">Summary</label>
+                <label for="image">Image</label>
                 <input type="file" class="form-control" id="image" >
             </div>
 
@@ -64,12 +76,59 @@
                 </div>
             </div>
             <div class="form-group">
-                <label>Skills</label>
+                <label>Technical Skills</label>
                 <div id="skillFields">
                     <div class="input-group mb-3">
                         <input type="text" class="form-control" placeholder="Skill" name="skill[]">
                         <div class="input-group-append">
                             <button class="btn btn-outline-secondary" type="button" onclick="addSkillField()">+</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="form-group">
+                <label>Soft Skills</label>
+                <div id="softSkillFields">
+                    <div class="input-group mb-3">
+                        <input type="text" class="form-control" placeholder="Soft Skill" name="Softskill[]">
+                        <div class="input-group-append">
+                            <button class="btn btn-outline-secondary" type="button" onclick="addSoftSkillField()">+</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="form-group">
+                <label>Language</label>
+                <div id="languageField">
+                    <div class="input-group mb-3">
+                        <input type="text" class="form-control" placeholder="Language" name="language[]">
+                        <div class="input-group-append">
+                            <button class="btn btn-outline-secondary" type="button" onclick="language()">+</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="form-group">
+                <label>Projects</label>
+                <div id="projectField">
+                    <div class="input-group mb-3">
+                        <input type="text" class="form-control" placeholder="Project Title" name="projectTitle[]">
+                        <input type="text" class="form-control" placeholder="Project Languages" name="projectLanguage[]">
+                        <textarea class="form-control" id="projectSummary" rows="3" placeholder="Enter your Project Summary"></textarea>
+                        <div class="input-group-append">
+                            <button class="btn btn-outline-secondary" type="button" onclick="addNewProject()">+</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="form-group">
+                <label>Certifications</label>
+                <div id="certificationsField">
+                    <div class="input-group mb-3">
+                        <input type="text" class="form-control" placeholder="Certification Title" name="CertificationsTitle[]">
+                        <input type="text" class="form-control" placeholder="Certifications Link" name="CertificationsLink[]">
+                        <div class="input-group-append">
+                            <button class="btn btn-outline-secondary" type="button" onclick="addNewCertification()">+</button>
                         </div>
                     </div>
                 </div>
