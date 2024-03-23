@@ -188,10 +188,9 @@ $(document).ready(function() {
         var imageElement = '';
         if (image) {
             var imageUrl = URL.createObjectURL(image);
-            imageElement = `<img src="${imageUrl}" alt="User Image" style=" width:5.42cm;
-            height: 5.42cm;">`;
+            imageElement = `<img src="${imageUrl}" alt="User Image" style="z-index:9999">`;
         } else {
-            imageElement = '<p>No image selected</p>';
+            imageElement = `<img src="https://www.w3schools.com/howto/img_avatar.png" alt="" style="z-index: 9999;">`;
         }
         
         
@@ -206,13 +205,14 @@ $(document).ready(function() {
             <link href='https://fonts.googleapis.com/css?family=League Spartan' rel='stylesheet'>
         <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet">
             <link rel="stylesheet" href="./template/template2.css">
-            
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.9.2/html2pdf.bundle.min.js"></script>
+
         </head>
         <body>
             <div class="template-main" id="main-form">
                 <div class="header">
                     <div class="img">
-                        <img src="https://www.w3schools.com/howto/img_avatar.png" alt="">
+                        ${imageElement}
                     </div>
                     <h1 >
                         ${fullName}
@@ -310,11 +310,11 @@ $(document).ready(function() {
                 </div>
             </div>
         </div>
-            <script src="/template/script1.js">
-                
-            </script>
-            <script src="../script.js"></script> 
+        </div>
         </body>
+        <button id="downloadButton" onclick="printCV()">Download PDF</button>
+       
+        <script src="./script.js"></script>
         </html>`
         var resumePage = window.open();
         resumePage.document.open();
@@ -325,11 +325,7 @@ $(document).ready(function() {
     $('#resumeForm').submit(generateResume);
 });
 
-function generateResume(event) {
-    let fullName = document.getElementById('fullName').value;
-    console.log(fullName);
-    
-}
+
 function printCV(){
-    window.print('template-main');
+    window.print();
 }
