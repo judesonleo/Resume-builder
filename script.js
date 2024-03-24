@@ -3,6 +3,7 @@ function addEducationField() {
         <div class="input-group mb-3">
             <input type="text" class="form-control" placeholder="Degree" name="degree[]">
             <input type="text" class="form-control" placeholder="University" name="university[]">
+            <input type="text" class="form-control" placeholder="Time Frame" name="timeeducation[]">
             <div class="input-group-append">
                 <button class="btn btn-outline-secondary" type="button" onclick="removeEducationField(this)">-</button>
             </div>
@@ -116,7 +117,8 @@ $(document).ready(function() {
         $('input[name="degree[]"]').each(function(index) {
             var degree = $(this).val();
             var university = $('input[name="university[]"]').eq(index).val();
-            education.push({ degree: degree, university: university });
+            var timeeducation = $('input[name="timeeducation[]"]').eq(index).val();
+            education.push({ degree: degree, university: university, timeeducation: timeeducation});
         });
         var experience = [];
         $('input[name="jobTitle[]"]').each(function(index) {
@@ -170,7 +172,7 @@ $(document).ready(function() {
             return `
                 <div class="title">
                     <h4>${projectTitle}</h4>
-                    <h4>${projectLanguages[index]}</h4>
+                    <h4 class="projectLanguage">${projectLanguages[index]}</h4>
                 </div>
                 <p>${projectSummary[index]}</p>`;
         }).join('');
@@ -221,7 +223,7 @@ $(document).ready(function() {
                 <div class="main">
                 <div class="first">
                     <div class="profile-section">
-                        <h3 class="heading">My contact</h3>
+                        <h2 class="heading">My contact</h2>
                         <div class="links">
                             <a href="">${address}</a>
                             <a href="">${phone}</a>
@@ -233,7 +235,7 @@ $(document).ready(function() {
                         </div>
                         
                         <div class="Soft-Skills">
-                            <h3 class="heading">Soft Skills</h3>
+                            <h2 class="heading">Soft Skills</h2>
                             <div class="lists">
                                 <ul>
                                 ${Softskills.map(function(Softskill) {
@@ -243,11 +245,11 @@ $(document).ready(function() {
                             </div>
                         </div>
                         <div class="education">
-                            <h3 class="heading">Education Background</h3>
+                            <h2 class="heading">Education Background</h2>
                             <div class="lists">
                                 <ul>
                                 ${education.map(function(edu) {
-                                    return `<li>${edu.degree} from ${edu.university}</li>`;
+                                    return `<li class="degree">${edu.degree} </li><li class="university"> ${edu.university}</li><li class="timeeducation">${edu.timeeducation}</li>`;
                                 }).join('')}
                                     
                                     
@@ -255,7 +257,7 @@ $(document).ready(function() {
                             </div>
                         </div>
                         <div class="language">
-                            <h3 class="heading">Language</h3>
+                            <h2 class="heading">Language</h2>
                             <div class="lists">
                                 <ul>
                                 ${languages.map(function(language) {
@@ -270,13 +272,13 @@ $(document).ready(function() {
                 
                 <div class="second">
                     <div class="Summary">
-                        <h3 class="heading">Summary</h3>
+                        <h2 class="heading">Summary</h2>
                         <p class="lists">
                                 ${summary}
                         </p>
                     </div>
                     <div class="education">
-                        <h3 class="heading">Projects & experience</h3>
+                        <h2 class="heading">Projects & experience</h2>
                         <div class="lists">
                             <div class="projects">
                             ${projectsHtml}
@@ -286,7 +288,7 @@ $(document).ready(function() {
                             </div>
                         </div>
                         <div class="Technical-Skills">
-                        <h3 class="heading">Technical Skills</h3>
+                        <h2 class="heading">Technical Skills</h2>
                         <div class="lists">
                         
                             <ul>
@@ -299,9 +301,9 @@ $(document).ready(function() {
                     </div>
                     <div class="certifications">
                         <div class="certicate">
-                            <h3 class="heading">
+                            <h2 class="heading">
                                 Certifications
-                            </h3>
+                            </h2>
                             <div class="lists">
                                 ${certificationsHtml}
                                     
