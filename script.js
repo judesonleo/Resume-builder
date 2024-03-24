@@ -259,7 +259,7 @@ $(document).ready(function() {
                         <div class="language">
                             <h2 class="heading">Language</h2>
                             <div class="lists">
-                                <ul>
+                                <ul class="grids">
                                 ${languages.map(function(language) {
                                     return `<li>${language}</li>`;
                                 }).join('')}
@@ -291,7 +291,7 @@ $(document).ready(function() {
                         <h2 class="heading">Technical Skills</h2>
                         <div class="lists">
                         
-                            <ul>
+                            <ul class="grids">
                             ${skills.map(function(skill) {
                                 return `<li>${skill}</li>`;
                             }).join('')}
