@@ -55,10 +55,30 @@ gap: 40px;
 .btn{
     margin: 20px ;
     background-color: var(--background-color);
-    border-radius: 20px;
+    border-radius: 10px;
     color: var(--text-color);
 }
 .disabled{
     background-color: #f7f7f7 !important;
     color: #000000 !important;
+}
+.info {
+    margin: 30px;
+}
+.text-primary {
+    color: var() !important;
+}
+.personal{
+    display: flex;
+    align-items: center;
+margin-left: 30px;
+}
+
+.material-symbols-rounded {
+   font-size: 40px !important;
+  font-variation-settings:
+  'FILL' 0,
+  'wght' 300,
+  'GRAD' 900,
+  'opsz' 24
 }
