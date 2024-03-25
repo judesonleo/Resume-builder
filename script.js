@@ -1,9 +1,9 @@
 function addEducationField() {
     var html = `
         <div class="input-group mb-3">
-            <input type="text" class="form-control" placeholder="Degree" name="degree[]">
-            <input type="text" class="form-control" placeholder="University" name="university[]">
-            <input type="text" class="form-control" placeholder="Time Frame" name="timeeducation[]">
+            <input type="text" class="form-control bg-info" placeholder="Degree" name="degree[]">
+            <input type="text" class="form-control bg-info" placeholder="University" name="university[]">
+            <input type="text" class="form-control bg-info" placeholder="Time Frame" name="timeeducation[]">
             <div class="input-group-append">
                 <button class="btn btn-outline-secondary" type="button" onclick="removeEducationField(this)">-</button>
             </div>
@@ -19,8 +19,8 @@ function removeEducationField(element) {
 function addExperienceField() {
     var html = `
         <div class="input-group mb-3">
-            <input type="text" class="form-control" placeholder="Job Title" name="jobTitle[]">
-            <input type="text" class="form-control" placeholder="Company" name="company[]">
+            <input type="text" class="form-control bg-info" placeholder="Job Title" name="jobTitle[]">
+            <input type="text" class="form-control bg-info" placeholder="Company" name="company[]">
             <div class="input-group-append">
                 <button class="btn btn-outline-secondary" type="button" onclick="removeExperienceField(this)">-</button>
             </div>
@@ -35,7 +35,7 @@ function removeExperienceField(element) {
 function addSkillField() {
     var html = `
         <div class="input-group mb-3">
-            <input type="text" class="form-control" placeholder="Skill" name="skill[]">
+            <input type="text" class="form-control bg-info" placeholder="Skill" name="skill[]">
             <div class="input-group-append">
                 <button class="btn btn-outline-secondary" type="button" onclick="removeSkillField(this)">-</button>
             </div>
@@ -46,7 +46,7 @@ function addSkillField() {
 function addSoftSkillField() {
     var html = `
         <div class="input-group mb-3">
-            <input type="text" class="form-control" placeholder="Soft Skill" name="Softskill[]">
+            <input type="text" class="form-control bg-info" placeholder="Soft Skill" name="Softskill[]">
             <div class="input-group-append">
                 <button class="btn btn-outline-secondary" type="button" onclick="removeSkillField(this)">-</button>
             </div>
@@ -58,9 +58,9 @@ function addSoftSkillField() {
 function addNewProject(){
     var html = `
     <div class="input-group mb-3">
-    <input type="text" class="form-control" placeholder="Project Title" name="projectTitle[]">
-    <input type="text" class="form-control" placeholder="Project Languages" name="projectLanguage[]">
-    <textarea class="form-control" id="projectSummary" rows="3" placeholder="Enter your Project Summary"></textarea>
+    <input type="text" class="form-control bg-info" placeholder="Project Title" name="projectTitle[]">
+    <input type="text" class="form-control bg-info" placeholder="Project Languages" name="projectLanguage[]">
+    <textarea class="form-control bg-info" id="projectSummary" rows="3" placeholder="Enter your Project Summary"></textarea>
     <div class="input-group-append">
         <button class="btn btn-outline-secondary" type="button" onclick="removeProjectField(this)">-</button>
         </div>
@@ -76,7 +76,7 @@ function removeProjectField(element){
 function language() {
     var html = `
         <div class="input-group mb-3">
-            <input type="text" class="form-control" placeholder="Language" name="language[]">
+            <input type="text" class="form-control bg-info" placeholder="Language" name="language[]">
             <div class="input-group-append">
                 <button class="btn btn-outline-secondary" type="button" onclick="removeSkillField(this)">-</button>
             </div>
@@ -88,8 +88,8 @@ function language() {
 function addNewCertification(){
     var html = `
     <div class="input-group mb-3">
-    <input type="text" class="form-control" placeholder="Certification Title" name="certificationsTitle[]">
-    <input type="text" class="form-control" placeholder="Certification Link" name="certificationsLink[]">
+    <input type="text" class="form-control bg-info" placeholder="Certification Title" name="certificationsTitle[]">
+    <input type="text" class="form-control bg-info" placeholder="Certification Link" name="certificationsLink[]">
     <div class="input-group-append">
         <button class="btn btn-outline-secondary" type="button" onclick="removeCertificationField(this)">-</button>
         </div>`

@@ -3,12 +3,13 @@
     --text-color: #000000;
     --background:#ffffff;
     --bodycolor:#f4f4f4;
-
+    --inputfield: #f7f7f7;
 }
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: 'Lato', sans-serif;
 
 }
 .border-dashed {
@@ -16,11 +17,48 @@
 }
 .bg-transparent {
     background-color: var(--background-color) !important;
-
+    min-height: 100vh;
 }
 .bg-secondary {
     background-color: var(--bodycolor) !important;
 }
 hr{
     margin: 0;
+}
+.form-control::placeholder {
+    color: #000000;
+}
+.bg-info {
+    background-color: var(--inputfield) !important;
+}
+.Personal-info {
+/* display: none; */
+display: grid;
+grid-template-columns: auto auto;
+gap: 40px;
+}
+.social-links {
+    display: none;
+}
+.life-skills{
+    display: none;
+}
+.skills{
+    display: none;
+}
+.projects{
+    display: none;
+}
+.form-group>*{
+    padding: 10px;
+}
+.btn{
+    margin: 20px ;
+    background-color: var(--background-color);
+    border-radius: 20px;
+    color: var(--text-color);
+}
+.disabled{
+    background-color: #f7f7f7 !important;
+    color: #000000 !important;
 }

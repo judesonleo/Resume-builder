@@ -7,9 +7,12 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="index.css">
+    <link href='https://fonts.googleapis.com/css?family=League Spartan' rel='stylesheet'>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet">
+
 </head>
 <body>
-    <div class="container-fluid bg-transparent p-5 ">
+    <div class="container-fluid bg-transparent p-5 " >
         <div class="justify-content-center bg-light rounded-5 text-success ">
             <div class="bg-light rounded-5 pt-3 pb-0 ">
                 <h1 class="text-primary px-5">Resume Generator</h1>
@@ -17,55 +20,78 @@
             </div>
             <div class="row m-0 p-5 bg-secondary rounded-bottom-5" >
                     <div class="col-4">
-                        <div class="col card-group">
-                            hiii
+                        <div class="row card-group justify-content-center align-items-lg-center "  style="height: 50%;">
+                            <div class="col-3 bg-light justify-content-between">
+                                <div class="row">
+                                    <h1>byee</h1>
+                                    <div class="vr"></div>
+                                    <h1>hii</h1>
+                                </div>
+                            </div>
                         </div>
                     </div>
                     <form id="resumeForm" class="col">
+                        <div class="Personal-info">
                         <div class="form-group">
-                            <label for="fullName">Full Name</label>
-                            <input type="text" class="form-control" id="fullName" placeholder="Enter your full name">
+                            <label for="fullName" class="text-secondary">Full Name</label>
+                            <input type="text" class="form-control bg-info" id="fullName" placeholder="Enter your full name">
                         </div>
                         <div class="form-group">
-                            <label for="email">Email address</label>
-                            <input type="email" class="form-control" id="email" placeholder="Enter your email">
+                            <label for="email" class="text-secondary">Email address</label>
+                            <input type="email" class="form-control bg-info" id="email" placeholder="Enter your email">
                         </div>
                         <div class="form-group">
-                            <label for="phone">Phone Number</label>
-                            <input type="number" maxlength="10" class="form-control" id="phone" placeholder="Enter your phone number">
+                            <label for="phone" class="text-secondary">Phone Number</label>
+                            <input type="number" maxlength="10" class="form-control bg-info" id="phone" placeholder="Enter your phone number">
                         </div>
                         <div class="form-group">
-                            <label for="address">Address</label>
-                            <input type="text" class="form-control" id="address" placeholder="Enter your address">
+                            <label for="address" class="text-secondary">Address</label>
+                            <input type="text" class="form-control bg-info" id="address" placeholder="Enter your address">
                         </div>
                         <div class="form-group">
-                            <label for="email">Linkdin</label>
-                            <input type="url" class="form-control" id="linkdin" placeholder="Enter your Linkdin">
+                            <label for="summary" class="text-secondary">Summary</label>
+                            <textarea class="form-control bg-info" id="summary" rows="3" placeholder="Enter your summary"></textarea>
                         </div>
                         <div class="form-group">
-                            <label for="email">Github address</label>
-                            <input type="url" class="form-control" id="github" placeholder="Enter your github">
+                            <label for="image" class="text-secondary">Image</label>
+                            <input type="file" class="form-control bg-info" id="image" >
+                        </div>
+                    </div>
+                    <div class="social-links">
+
+                        <div class="form-group">
+                            <label for="email" class="text-secondary">Linkdin</label>
+                            <input type="url" class="form-control bg-info" id="linkdin" placeholder="Enter your Linkdin">
                         </div>
                         <div class="form-group">
-                            <label for="email">Twitter address</label>
-                            <input type="url" class="form-control" id="twitter" placeholder="Enter your Twitter">
+                            <label for="email" class="text-secondary">Github address</label>
+                            <input type="url" class="form-control bg-info" id="github" placeholder="Enter your github">
                         </div>
                         <div class="form-group">
-                            <label for="summary">Summary</label>
-                            <textarea class="form-control" id="summary" rows="3" placeholder="Enter your summary"></textarea>
+                            <label for="email" class="text-secondary">Twitter address</label>
+                            <input type="url" class="form-control bg-info" id="twitter" placeholder="Enter your Twitter">
                         </div>
-                        <div class="form-group">
-                            <label for="image">Image</label>
-                            <input type="file" class="form-control" id="image" >
+                    </div>
+                    <div class="life-skills">
+                       <div class="form-group">
+                            <label class="text-secondary">Language</label>
+                            <div id="languageField">
+                                <div class="input-group mb-3">
+                                    <input type="text" class="form-control bg-info" placeholder="Language" name="language[]">
+                                    <div class="input-group-append">
+                                        <button class="btn btn-outline-secondary" type="button" onclick="language()">+</button>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
             
                         <div class="form-group">
-                            <label>Education</label>
+                            <label class="text-secondary">Education</label>
                             <div id="educationFields">
                                 <div class="input-group mb-3">
-                                    <input type="text" class="form-control" placeholder="Degree" name="degree[]">
-                                    <input type="text" class="form-control" placeholder="University" name="university[]">
-                                    <input type="text" class="form-control" placeholder="Time Frame" name="timeeducation[]">
+                                    <input type="text" class="form-control bg-info" placeholder="Degree" name="degree[]">
+                                    <input type="text" class="form-control bg-info" placeholder="University" name="university[]">
+                                    <input type="text" class="form-control bg-info" placeholder="Time Frame" name="timeeducation[]">
                                     <div class="input-group-append">
                                         <button class="btn btn-outline-secondary" type="button" onclick="addEducationField()">+</button>
                                     </div>
@@ -73,22 +99,24 @@
                             </div>
                         </div>
                         <div class="form-group">
-                            <label>Work Experience</label>
+                            <label class="text-secondary">Work Experience</label>
                             <div id="experienceFields">
                                 <div class="input-group mb-3">
-                                    <input type="text" class="form-control" placeholder="Job Title" name="jobTitle[]">
-                                    <input type="text" class="form-control" placeholder="Company" name="company[]">
+                                    <input type="text" class="form-control bg-info" placeholder="Job Title" name="jobTitle[]">
+                                    <input type="text" class="form-control bg-info" placeholder="Company" name="company[]">
                                     <div class="input-group-append">
                                         <button class="btn btn-outline-secondary" type="button" onclick="addExperienceField()">+</button>
                                     </div>
                                 </div>
                             </div>
                         </div>
+                    </div>
+                    <div class="skills">
                         <div class="form-group">
-                            <label>Technical Skills</label>
+                            <label class="text-secondary">Technical Skills</label>
                             <div id="skillFields">
                                 <div class="input-group mb-3">
-                                    <input type="text" class="form-control" placeholder="Skill" name="skill[]">
+                                    <input type="text" class="form-control bg-info" placeholder="Skill" name="skill[]">
                                     <div class="input-group-append">
                                         <button class="btn btn-outline-secondary" type="button" onclick="addSkillField()">+</button>
                                     </div>
@@ -96,34 +124,25 @@
                             </div>
                         </div>
                         <div class="form-group">
-                            <label>Soft Skills</label>
+                            <label class="text-secondary">Soft Skills</label>
                             <div id="softSkillFields">
                                 <div class="input-group mb-3">
-                                    <input type="text" class="form-control" placeholder="Soft Skill" name="Softskill[]">
+                                    <input type="text" class="form-control bg-info" placeholder="Soft Skill" name="Softskill[]">
                                     <div class="input-group-append">
                                         <button class="btn btn-outline-secondary" type="button" onclick="addSoftSkillField()">+</button>
                                     </div>
                                 </div>
                             </div>
                         </div>
+                    </div>
+                    <div class="projects">
                         <div class="form-group">
-                            <label>Language</label>
-                            <div id="languageField">
-                                <div class="input-group mb-3">
-                                    <input type="text" class="form-control" placeholder="Language" name="language[]">
-                                    <div class="input-group-append">
-                                        <button class="btn btn-outline-secondary" type="button" onclick="language()">+</button>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="form-group">
-                            <label>Projects</label>
+                            <label class="text-secondary">Projects</label>
                             <div id="projectField">
                                 <div class="input-group mb-3">
-                                    <input type="text" class="form-control" placeholder="Project Title" name="projectTitle[]">
-                                    <input type="text" class="form-control" placeholder="Project Languages" name="projectLanguage[]">
-                                    <textarea class="form-control" id="projectSummary" rows="3" placeholder="Enter your Project Summary"></textarea>
+                                    <input type="text" class="form-control bg-info" placeholder="Project Title" name="projectTitle[]">
+                                    <input type="text" class="form-control bg-info" placeholder="Project Languages" name="projectLanguage[]">
+                                    <textarea class="form-control bg-info" id="projectSummary" rows="3" placeholder="Enter your Project Summary"></textarea>
                                     <div class="input-group-append">
                                         <button class="btn btn-outline-secondary" type="button" onclick="addNewProject()">+</button>
                                     </div>
@@ -131,19 +150,21 @@
                             </div>
                         </div>
                         <div class="form-group">
-                            <label>Certifications</label>
+                            <label class="text-secondary">Certifications</label>
                             <div id="certificationsField">
                                 <div class="input-group mb-3">
-                                    <input type="text" class="form-control" placeholder="Certification Title" name="CertificationsTitle[]">
-                                    <input type="text" class="form-control" placeholder="Certifications Link" name="CertificationsLink[]">
+                                    <input type="text" class="form-control bg-info" placeholder="Certification Title" name="CertificationsTitle[]">
+                                    <input type="text" class="form-control bg-info" placeholder="Certifications Link" name="CertificationsLink[]">
                                     <div class="input-group-append">
                                         <button class="btn btn-outline-secondary" type="button" onclick="addNewCertification()">+</button>
                                     </div>
                                 </div>
                             </div>
                         </div>
-            
-                        <button type="submit" class="btn btn-primary" onclick="generateResume()">Generate Resume</button>
+                    </div>
+                    <button type="button" class="btn btn-primary disabled step1" onclick="back()">Prev</button>
+                    <button type="button" class="btn btn-primary step2" onclick="next()">Next</button>
+                    <button type="submit" class="btn btn-primary disabled step5" onclick="generateResume()">Generate Resume</button>
                     </form>
                 </div>
             </div>
