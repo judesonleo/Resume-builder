@@ -1,6 +1,26 @@
 :root {
-    --background-color: #dbdcd7;
+    --background-color: #feefb6;
     --text-color: #000000;
-    --background:#fefefe;
-}
+    --background:#ffffff;
+    --bodycolor:#f4f4f4;
 
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+.border-dashed {
+    border: 2px dashed #000;
+}
+.bg-transparent {
+    background-color: var(--background-color) !important;
+
+}
+.bg-secondary {
+    background-color: var(--bodycolor) !important;
+}
+hr{
+    margin: 0;
+}
