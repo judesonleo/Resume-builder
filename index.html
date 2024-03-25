@@ -11,19 +11,19 @@
     <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" /><body>
     <div class="container-fluid bg-transparent p-5 " >
-        <div class="justify-content-center bg-light rounded-5 text-success ">
+        <div class="justify-content-center bg-light rounded-5 text-success main-box">
             <div class="bg-light rounded-5 pt-3 pb-0 ">
                 <h1 class="text-primary px-5">Resume Generator</h1>
                 <hr class="hr p-0" />
             </div>
-            <div class="row m-0 p-5 bg-secondary rounded-bottom-5" >
+            <div class="row m-0 p-5 bg-secondary rounded-bottom-5 main-temp" >
                     <div class="col-4">
-                        <div class="row card-group justify-content-center align-items-lg-center "  style="height: 50%;">
-                            <div class="col-9 bg-light justify-content-between rounded-5">
-                                <div class="row">
+                        <div class="row card-group justify-content-center align-items-lg-center box-2"  style="height: 50%;">
+                            <div class="col-9 bg-light justify-content-between rounded-5 box-1">
+                                <div class="row box">
                                     <div class="personal">
                                         <div class="img">
-                                            <span class="material-symbols-rounded ">
+                                            <span class="material-symbols-rounded fill">
                                                 counter_1
                                                 </span>
                                         </div>
@@ -34,7 +34,7 @@
                                     </div>
                                     <div class="personal">
                                         <div class="img">
-                                            <span class="material-symbols-rounded">
+                                            <span class="material-symbols-rounded ">
                                                 counter_2
                                                 </span>
                                         </div>
@@ -54,34 +54,34 @@
                                             <h5>Education</h5>
                                         </div>
                                     </div>
-                                </div>
-                                <div class="personal">
-                                    <div class="img">
-                                        <span class="material-symbols-rounded">
-                                            counter_4
+                                    <div class="personal">
+                                        <div class="img">
+                                            <span class="material-symbols-rounded">
+                                                counter_4
                                             </span>
+                                        </div>
+                                        <div class="info">
+                                            <h6 class="text-secondary">Step 04</h6>
+                                            <h5>Skills</h5>
+                                        </div>
                                     </div>
-                                    <div class="info">
-                                        <h6 class="text-secondary">Step 04</h6>
-                                        <h5>Skills</h5>
-                                    </div>
-                                </div>
-                                <div class="personal">
-                                    <div class="img">
-                                        <span class="material-symbols-rounded">
-                                            counter_5
+                                    <div class="personal">
+                                        <div class="img">
+                                            <span class="material-symbols-rounded">
+                                                counter_5
                                             </span>
-                                    </div>
-                                    <div class="info">
-                                        <h6 class="text-secondary">Step 05</h6>
-                                        <h5>Projects</h5>
+                                        </div>
+                                        <div class="info">
+                                            <h6 class="text-secondary">Step 05</h6>
+                                            <h5>Projects</h5>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
                     <form id="resumeForm" class="col">
-                        <div class="Personal-info">
+                        <div class="Personal-info form-step">
                         <div class="form-group">
                             <label for="fullName" class="text-secondary">Full Name</label>
                             <input type="text" class="form-control bg-info" id="fullName" placeholder="Enter your full name">
@@ -107,7 +107,7 @@
                             <input type="file" class="form-control bg-info" id="image" >
                         </div>
                     </div>
-                    <div class="social-links">
+                    <div class="social-links form-step">
 
                         <div class="form-group">
                             <label for="email" class="text-secondary">Linkdin</label>
@@ -122,7 +122,7 @@
                             <input type="url" class="form-control bg-info" id="twitter" placeholder="Enter your Twitter">
                         </div>
                     </div>
-                    <div class="life-skills">
+                    <div class="life-skills form-step">
                        <div class="form-group">
                             <label class="text-secondary">Language</label>
                             <div id="languageField">
@@ -161,7 +161,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="skills">
+                    <div class="skills form-step">
                         <div class="form-group">
                             <label class="text-secondary">Technical Skills</label>
                             <div id="skillFields">
@@ -185,7 +185,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="projects">
+                    <div class="projects form-step">
                         <div class="form-group">
                             <label class="text-secondary">Projects</label>
                             <div id="projectField">
@@ -212,9 +212,9 @@
                             </div>
                         </div>
                     </div>
-                    <button type="button" class="btn btn-primary disabled step1" onclick="back()">Prev</button>
-                    <button type="button" class="btn btn-primary step2" onclick="next()">Next</button>
-                    <button type="submit" class="btn btn-primary disabled step5" onclick="generateResume()">Generate Resume</button>
+                    <button type="button" class="btn btn-primary  step-prev" >Prev</button>
+                    <button type="button" class="btn btn-primary step-next">Next</button>
+                    <button type="submit" class="btn btn-primary  step-submit" onclick="generateResume()">Generate Resume</button>
                     </form>
                 </div>
             </div>
@@ -225,6 +225,7 @@
 
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="script.js"></script>
+    <script src="./randomscript.js"></script>
     <!-- <a href="/template/template1.html">html</a>
     <a href="/template/template2.html">html</a> -->
 </body>

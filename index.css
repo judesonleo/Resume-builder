@@ -73,12 +73,40 @@ gap: 40px;
     align-items: center;
 margin-left: 30px;
 }
+textarea {
+border-radius: 10px;}
 
 .material-symbols-rounded {
    font-size: 40px !important;
+   color: var(--text-color);
   font-variation-settings:
   'FILL' 0,
   'wght' 300,
   'GRAD' 900,
   'opsz' 24
 }
+.fill {
+   font-size: 40px !important;
+   color: var(--text-color);
+  font-variation-settings:
+  'FILL' 1,
+  'wght' 300,
+  'GRAD' 900,
+  'opsz' 24
+}
+
+.main-box,.box-1{
+    box-shadow: #695b5b 0px 0px 10px ;
+
+}
+@media only screen and (max-width: 767px) {
+   
+   .box-2{
+    display: none;
+   }
+ 
+   .col-4{
+    display: none;
+   }
+  }
+  
