@@ -1,232 +1,512 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Resume Generator</title>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="index.css">
-    <link href='https://fonts.googleapis.com/css?family=League Spartan' rel='stylesheet'>
-    <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" /><body>
-    <div class="container-fluid bg-transparent p-5 " >
-        <div class="justify-content-center bg-light rounded-5 text-success main-box">
-            <div class="bg-light rounded-5 pt-3 pb-0 ">
-                <h1 class="text-primary px-5">Resume Generator</h1>
-                <hr class="hr p-0" />
-            </div>
-            <div class="row m-0 p-5 bg-secondary rounded-bottom-5 main-temp" >
-                    <div class="col-4">
-                        <div class="row card-group justify-content-center align-items-lg-center box-2"  style="height: 50%;">
-                            <div class="col-9 bg-light justify-content-between rounded-5 box-1">
-                                <div class="row box">
-                                    <div class="personal">
-                                        <div class="img">
-                                            <span class="material-symbols-rounded fill">
-                                                counter_1
-                                                </span>
-                                        </div>
-                                        <div class="info">
-                                            <h6 class="text-secondary">Step 01</h6>
-                                            <h5>Personal Details</h5>
-                                        </div>
-                                    </div>
-                                    <div class="personal">
-                                        <div class="img">
-                                            <span class="material-symbols-rounded ">
-                                                counter_2
-                                                </span>
-                                        </div>
-                                        <div class="info">
-                                            <h6 class="text-secondary">Step 02</h6>
-                                            <h5>Social Links</h5>
-                                        </div>
-                                    </div>
-                                    <div class="personal">
-                                        <div class="img">
-                                            <span class="material-symbols-rounded">
-                                                counter_3
-                                                </span>
-                                        </div>
-                                        <div class="info">
-                                            <h6 class="text-secondary">Step 03</h6>
-                                            <h5>Education</h5>
-                                        </div>
-                                    </div>
-                                    <div class="personal">
-                                        <div class="img">
-                                            <span class="material-symbols-rounded">
-                                                counter_4
-                                            </span>
-                                        </div>
-                                        <div class="info">
-                                            <h6 class="text-secondary">Step 04</h6>
-                                            <h5>Skills</h5>
-                                        </div>
-                                    </div>
-                                    <div class="personal">
-                                        <div class="img">
-                                            <span class="material-symbols-rounded">
-                                                counter_5
-                                            </span>
-                                        </div>
-                                        <div class="info">
-                                            <h6 class="text-secondary">Step 05</h6>
-                                            <h5>Projects</h5>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <form id="resumeForm" class="col">
-                        <div class="Personal-info form-step">
-                        <div class="form-group">
-                            <label for="fullName" class="text-secondary">Full Name</label>
-                            <input type="text" class="form-control bg-info" id="fullName" placeholder="Enter your full name">
-                        </div>
-                        <div class="form-group">
-                            <label for="email" class="text-secondary">Email address</label>
-                            <input type="email" class="form-control bg-info" id="email" placeholder="Enter your email">
-                        </div>
-                        <div class="form-group">
-                            <label for="phone" class="text-secondary">Phone Number</label>
-                            <input type="number" maxlength="10" class="form-control bg-info" id="phone" placeholder="Enter your phone number">
-                        </div>
-                        <div class="form-group">
-                            <label for="address" class="text-secondary">Address</label>
-                            <input type="text" class="form-control bg-info" id="address" placeholder="Enter your address">
-                        </div>
-                        <div class="form-group">
-                            <label for="summary" class="text-secondary">Summary</label>
-                            <textarea class="form-control bg-info" id="summary" rows="3" placeholder="Enter your summary"></textarea>
-                        </div>
-                        <div class="form-group">
-                            <label for="image" class="text-secondary">Image</label>
-                            <input type="file" class="form-control bg-info" id="image" >
-                        </div>
-                    </div>
-                    <div class="social-links form-step">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Resume Generator</title>
+		<link
+			rel="stylesheet"
+			href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+			integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+			crossorigin="anonymous"
+		/>
+		<script
+			src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+			integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+			crossorigin="anonymous"
+		></script>
+		<link rel="stylesheet" href="index.css" />
+		<link
+			href="https://fonts.googleapis.com/css?family=League Spartan"
+			rel="stylesheet"
+		/>
+		<link
+			href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap"
+			rel="stylesheet"
+		/>
+		<link
+			rel="stylesheet"
+			href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
+		/>
+		<!-- PWA Meta Tags -->
+		<meta name="description" content="Create professional resumes with ease" />
+		<meta name="theme-color" content="#feefb6" />
+		<link rel="manifest" href="/manifest.json" />
+		<link rel="apple-touch-icon" href="/icons/icon-192x192.png" />
+	</head>
+	<body>
+		<div class="container-fluid bg-transparent p-5">
+			<div
+				class="justify-content-center bg-light rounded-5 text-success main-box"
+			>
+				<div class="bg-light rounded-5 pt-3 pb-0">
+					<h1 class="text-primary px-5">Resume Generator</h1>
+					<hr class="hr p-0" />
+				</div>
+				<div class="row m-0 p-5 bg-secondary rounded-bottom-5 main-temp">
+					<div class="col-4">
+						<div
+							class="row card-group justify-content-center align-items-lg-center box-2"
+							style="height: 50%"
+						>
+							<div
+								class="col-9 bg-light justify-content-between rounded-5 box-1"
+							>
+								<div class="row box">
+									<div class="personal">
+										<div class="img">
+											<span class="material-symbols-rounded fill">
+												counter_1
+											</span>
+										</div>
+										<div class="info">
+											<h6 class="text-secondary">Step 01</h6>
+											<h5>Personal Details</h5>
+										</div>
+									</div>
+									<div class="personal">
+										<div class="img">
+											<span class="material-symbols-rounded"> counter_2 </span>
+										</div>
+										<div class="info">
+											<h6 class="text-secondary">Step 02</h6>
+											<h5>Social Links</h5>
+										</div>
+									</div>
+									<div class="personal">
+										<div class="img">
+											<span class="material-symbols-rounded"> counter_3 </span>
+										</div>
+										<div class="info">
+											<h6 class="text-secondary">Step 03</h6>
+											<h5>Education</h5>
+										</div>
+									</div>
+									<div class="personal">
+										<div class="img">
+											<span class="material-symbols-rounded"> counter_4 </span>
+										</div>
+										<div class="info">
+											<h6 class="text-secondary">Step 04</h6>
+											<h5>Skills</h5>
+										</div>
+									</div>
+									<div class="personal">
+										<div class="img">
+											<span class="material-symbols-rounded"> counter_5 </span>
+										</div>
+										<div class="info">
+											<h6 class="text-secondary">Step 05</h6>
+											<h5>Projects</h5>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<form id="resumeForm" class="col">
+						<div class="Personal-info form-step">
+							<div class="form-group">
+								<label for="fullName" class="text-secondary">Full Name</label>
+								<input
+									type="text"
+									class="form-control bg-info"
+									id="fullName"
+									placeholder="Enter your full name"
+								/>
+							</div>
+							<div class="form-group">
+								<label for="email" class="text-secondary">Email address</label>
+								<input
+									type="email"
+									class="form-control bg-info"
+									id="email"
+									placeholder="Enter your email"
+								/>
+							</div>
+							<div class="form-group">
+								<label for="phone" class="text-secondary">Phone Number</label>
+								<input
+									type="number"
+									maxlength="10"
+									class="form-control bg-info"
+									id="phone"
+									placeholder="Enter your phone number"
+								/>
+							</div>
+							<div class="form-group">
+								<label for="address" class="text-secondary">Address</label>
+								<input
+									type="text"
+									class="form-control bg-info"
+									id="address"
+									placeholder="Enter your address"
+								/>
+							</div>
+							<div class="form-group">
+								<label for="summary" class="text-secondary">Summary</label>
+								<textarea
+									class="form-control bg-info"
+									id="summary"
+									rows="3"
+									placeholder="Enter your summary"
+								></textarea>
+							</div>
+							<div class="form-group">
+								<label for="image" class="text-secondary">Image</label>
+								<input type="file" class="form-control bg-info" id="image" />
+							</div>
+						</div>
+						<div class="social-links form-step">
+							<div class="form-group">
+								<label for="email" class="text-secondary">Linkdin</label>
+								<input
+									type="url"
+									class="form-control bg-info"
+									id="linkdin"
+									placeholder="Enter your Linkdin"
+								/>
+							</div>
+							<div class="form-group">
+								<label for="email" class="text-secondary">Github address</label>
+								<input
+									type="url"
+									class="form-control bg-info"
+									id="github"
+									placeholder="Enter your github"
+								/>
+							</div>
+							<div class="form-group">
+								<label for="email" class="text-secondary"
+									>Twitter address</label
+								>
+								<input
+									type="url"
+									class="form-control bg-info"
+									id="twitter"
+									placeholder="Enter your Twitter"
+								/>
+							</div>
+						</div>
+						<div class="life-skills form-step">
+							<div class="form-group">
+								<label class="text-secondary">Language</label>
+								<div id="languageField">
+									<div class="input-group mb-3">
+										<input
+											type="text"
+											class="form-control bg-info"
+											placeholder="Language"
+											name="language[]"
+										/>
+										<div class="input-group-append">
+											<button
+												class="btn btn-outline-secondary"
+												type="button"
+												onclick="language()"
+											>
+												+
+											</button>
+										</div>
+									</div>
+								</div>
+							</div>
 
-                        <div class="form-group">
-                            <label for="email" class="text-secondary">Linkdin</label>
-                            <input type="url" class="form-control bg-info" id="linkdin" placeholder="Enter your Linkdin">
-                        </div>
-                        <div class="form-group">
-                            <label for="email" class="text-secondary">Github address</label>
-                            <input type="url" class="form-control bg-info" id="github" placeholder="Enter your github">
-                        </div>
-                        <div class="form-group">
-                            <label for="email" class="text-secondary">Twitter address</label>
-                            <input type="url" class="form-control bg-info" id="twitter" placeholder="Enter your Twitter">
-                        </div>
-                    </div>
-                    <div class="life-skills form-step">
-                       <div class="form-group">
-                            <label class="text-secondary">Language</label>
-                            <div id="languageField">
-                                <div class="input-group mb-3">
-                                    <input type="text" class="form-control bg-info" placeholder="Language" name="language[]">
-                                    <div class="input-group-append">
-                                        <button class="btn btn-outline-secondary" type="button" onclick="language()">+</button>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-            
-                        <div class="form-group">
-                            <label class="text-secondary">Education</label>
-                            <div id="educationFields">
-                                <div class="input-group mb-3">
-                                    <input type="text" class="form-control bg-info" placeholder="Degree" name="degree[]">
-                                    <input type="text" class="form-control bg-info" placeholder="University" name="university[]">
-                                    <input type="text" class="form-control bg-info" placeholder="Time Frame" name="timeeducation[]">
-                                    <div class="input-group-append">
-                                        <button class="btn btn-outline-secondary" type="button" onclick="addEducationField()">+</button>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="form-group">
-                            <label class="text-secondary">Work Experience</label>
-                            <div id="experienceFields">
-                                <div class="input-group mb-3">
-                                    <input type="text" class="form-control bg-info" placeholder="Job Title" name="jobTitle[]">
-                                    <input type="text" class="form-control bg-info" placeholder="Company" name="company[]">
-                                    <div class="input-group-append">
-                                        <button class="btn btn-outline-secondary" type="button" onclick="addExperienceField()">+</button>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="skills form-step">
-                        <div class="form-group">
-                            <label class="text-secondary">Technical Skills</label>
-                            <div id="skillFields">
-                                <div class="input-group mb-3">
-                                    <input type="text" class="form-control bg-info" placeholder="Skill" name="skill[]">
-                                    <div class="input-group-append">
-                                        <button class="btn btn-outline-secondary" type="button" onclick="addSkillField()">+</button>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="form-group">
-                            <label class="text-secondary">Soft Skills</label>
-                            <div id="softSkillFields">
-                                <div class="input-group mb-3">
-                                    <input type="text" class="form-control bg-info" placeholder="Soft Skill" name="Softskill[]">
-                                    <div class="input-group-append">
-                                        <button class="btn btn-outline-secondary" type="button" onclick="addSoftSkillField()">+</button>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="projects form-step">
-                        <div class="form-group">
-                            <label class="text-secondary">Projects</label>
-                            <div id="projectField">
-                                <div class="input-group mb-3">
-                                    <input type="text" class="form-control bg-info" placeholder="Project Title" name="projectTitle[]">
-                                    <input type="text" class="form-control bg-info" placeholder="Project Languages" name="projectLanguage[]">
-                                    <textarea class="form-control bg-info" id="projectSummary" rows="3" placeholder="Enter your Project Summary"></textarea>
-                                    <div class="input-group-append">
-                                        <button class="btn btn-outline-secondary" type="button" onclick="addNewProject()">+</button>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="form-group">
-                            <label class="text-secondary">Certifications</label>
-                            <div id="certificationsField">
-                                <div class="input-group mb-3">
-                                    <input type="text" class="form-control bg-info" placeholder="Certification Title" name="CertificationsTitle[]">
-                                    <input type="text" class="form-control bg-info" placeholder="Certifications Link" name="CertificationsLink[]">
-                                    <div class="input-group-append">
-                                        <button class="btn btn-outline-secondary" type="button" onclick="addNewCertification()">+</button>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <button type="button" class="btn btn-primary  step-prev" >Prev</button>
-                    <button type="button" class="btn btn-primary step-next">Next</button>
-                    <button type="submit" class="btn btn-primary  step-submit" onclick="generateResume()">Generate Resume</button>
-                    </form>
-                </div>
-            </div>
-            </div>
-            
-        
+							<div class="form-group">
+								<label class="text-secondary">Education</label>
+								<div id="educationFields">
+									<div class="input-group mb-3">
+										<input
+											type="text"
+											class="form-control bg-info"
+											placeholder="Degree"
+											name="degree[]"
+										/>
+										<input
+											type="text"
+											class="form-control bg-info"
+											placeholder="University"
+											name="university[]"
+										/>
+										<input
+											type="text"
+											class="form-control bg-info"
+											placeholder="Time Frame"
+											name="timeeducation[]"
+										/>
+										<div class="input-group-append">
+											<button
+												class="btn btn-outline-secondary"
+												type="button"
+												onclick="addEducationField()"
+											>
+												+
+											</button>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="form-group">
+								<label class="text-secondary">Work Experience</label>
+								<div id="experienceFields">
+									<div class="input-group mb-3">
+										<input
+											type="text"
+											class="form-control bg-info"
+											placeholder="Job Title"
+											name="jobTitle[]"
+										/>
+										<input
+											type="text"
+											class="form-control bg-info"
+											placeholder="Company"
+											name="company[]"
+										/>
+										<div class="input-group-append">
+											<button
+												class="btn btn-outline-secondary"
+												type="button"
+												onclick="addExperienceField()"
+											>
+												+
+											</button>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="skills form-step">
+							<div class="form-group">
+								<label class="text-secondary">Technical Skills</label>
+								<div id="skillFields">
+									<div class="input-group mb-3">
+										<input
+											type="text"
+											class="form-control bg-info"
+											placeholder="Skill"
+											name="skill[]"
+										/>
+										<div class="input-group-append">
+											<button
+												class="btn btn-outline-secondary"
+												type="button"
+												onclick="addSkillField()"
+											>
+												+
+											</button>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="form-group">
+								<label class="text-secondary">Soft Skills</label>
+								<div id="softSkillFields">
+									<div class="input-group mb-3">
+										<input
+											type="text"
+											class="form-control bg-info"
+											placeholder="Soft Skill"
+											name="Softskill[]"
+										/>
+										<div class="input-group-append">
+											<button
+												class="btn btn-outline-secondary"
+												type="button"
+												onclick="addSoftSkillField()"
+											>
+												+
+											</button>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="projects form-step">
+							<div class="form-group">
+								<label class="text-secondary">Projects</label>
+								<div id="projectField">
+									<div class="input-group mb-3">
+										<input
+											type="text"
+											class="form-control bg-info"
+											placeholder="Project Title"
+											name="projectTitle[]"
+										/>
+										<input
+											type="text"
+											class="form-control bg-info"
+											placeholder="Project Languages"
+											name="projectLanguage[]"
+										/>
+										<textarea
+											class="form-control bg-info"
+											id="projectSummary"
+											rows="3"
+											placeholder="Enter your Project Summary"
+										></textarea>
+										<div class="input-group-append">
+											<button
+												class="btn btn-outline-secondary"
+												type="button"
+												onclick="addNewProject()"
+											>
+												+
+											</button>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="form-group">
+								<label class="text-secondary">Certifications</label>
+								<div id="certificationsField">
+									<div class="input-group mb-3">
+										<input
+											type="text"
+											class="form-control bg-info"
+											placeholder="Certification Title"
+											name="CertificationsTitle[]"
+										/>
+										<input
+											type="text"
+											class="form-control bg-info"
+											placeholder="Certifications Link"
+											name="CertificationsLink[]"
+										/>
+										<div class="input-group-append">
+											<button
+												class="btn btn-outline-secondary"
+												type="button"
+												onclick="addNewCertification()"
+											>
+												+
+											</button>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<button type="button" class="btn btn-primary step-prev">
+							Prev
+						</button>
+						<button type="button" class="btn btn-primary step-next">
+							Next
+						</button>
+						<button
+							type="submit"
+							class="btn btn-primary step-submit"
+							onclick="generateResume()"
+						>
+							Generate Resume
+						</button>
+					</form>
+				</div>
+			</div>
+		</div>
+		<!-- Add install prompt for PWA -->
+		<div
+			id="installPrompt"
+			style="
+				display: none;
+				position: fixed;
+				bottom: 20px;
+				left: 20px;
+				background: #fff;
+				padding: 15px;
+				border-radius: 5px;
+				box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+				z-index: 9999;
+			"
+		>
+			<p>Install Resume Builder for offline use!</p>
+			<button id="installBtn" class="btn btn-primary">Install</button>
+			<button id="dismissBtn" class="btn btn-secondary">Not Now</button>
+		</div>
 
+		<!-- PWA offline notification -->
+		<div
+			id="offlineAlert"
+			style="
+				display: none;
+				position: fixed;
+				top: 0;
+				left: 0;
+				right: 0;
+				background: #ff5722;
+				color: white;
+				text-align: center;
+				padding: 10px;
+				z-index: 9999;
+			"
+		>
+			You are currently offline. Some features may not be available.
+		</div>
 
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-    <script src="script.js"></script>
-    <script src="./randomscript.js"></script>
-    <!-- <a href="/template/template1.html">html</a>
+		<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+		<script src="script.js"></script>
+		<script src="./randomscript.js"></script>
+		<!-- <a href="/template/template1.html">html</a>
     <a href="/template/template2.html">html</a> -->
-</body>
+		<!-- PWA registration script -->
+		<script src="./pwa.js"></script>
+		<!-- PWA install prompt logic -->
+		<script>
+			let deferredPrompt;
+			const installPrompt = document.getElementById("installPrompt");
+			const installBtn = document.getElementById("installBtn");
+			const dismissBtn = document.getElementById("dismissBtn");
+			const offlineAlert = document.getElementById("offlineAlert");
+
+			// Check if offline on load
+			if (!navigator.onLine) {
+				offlineAlert.style.display = "block";
+			}
+
+			// Listen for online/offline events
+			window.addEventListener("online", () => {
+				offlineAlert.style.display = "none";
+			});
+
+			window.addEventListener("offline", () => {
+				offlineAlert.style.display = "block";
+			});
+
+			// Listen for beforeinstallprompt event
+			window.addEventListener("beforeinstallprompt", (e) => {
+				// Prevent Chrome 67 and earlier from automatically showing the prompt
+				e.preventDefault();
+				// Stash the event so it can be triggered later
+				deferredPrompt = e;
+				// Show the install prompt
+				installPrompt.style.display = "block";
+			});
+
+			// Handle install button click
+			installBtn.addEventListener("click", () => {
+				// Hide the install prompt
+				installPrompt.style.display = "none";
+				// Show the browser install prompt
+				deferredPrompt.prompt();
+				// Wait for the user to respond to the prompt
+				deferredPrompt.userChoice.then((choiceResult) => {
+					if (choiceResult.outcome === "accepted") {
+						console.log("User accepted the install prompt");
+					} else {
+						console.log("User dismissed the install prompt");
+					}
+					deferredPrompt = null;
+				});
+			});
+
+			// Handle dismiss button click
+			dismissBtn.addEventListener("click", () => {
+				installPrompt.style.display = "none";
+			});
+
+			// Check if app is installed (display-mode: standalone)
+			if (window.matchMedia("(display-mode: standalone)").matches) {
+				// App is installed, hide the install prompt
+				installPrompt.style.display = "none";
+			}
+		</script>
+	</body>
 </html>

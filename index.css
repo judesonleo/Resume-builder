@@ -1,112 +1,171 @@
 :root {
-    --background-color: #feefb6;
-    --text-color: #000000;
-    --background:#ffffff;
-    --bodycolor:#f4f4f4;
-    --inputfield: #f7f7f7;
+	--background-color: #feefb6;
+	--text-color: #000000;
+	--background: #ffffff;
+	--bodycolor: #f4f4f4;
+	--inputfield: #f7f7f7;
 }
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Lato', sans-serif;
-
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: "Lato", sans-serif;
 }
 .border-dashed {
-    border: 2px dashed #000;
+	border: 2px dashed #000;
 }
 .bg-transparent {
-    background-color: var(--background-color) !important;
-    min-height: 100vh;
+	background-color: var(--background-color) !important;
+	min-height: 100vh;
 }
 .bg-secondary {
-    background-color: var(--bodycolor) !important;
+	background-color: var(--bodycolor) !important;
 }
-hr{
-    margin: 0;
+hr {
+	margin: 0;
 }
 .form-control::placeholder {
-    color: #000000;
+	color: #000000;
 }
 .bg-info {
-    background-color: var(--inputfield) !important;
+	background-color: var(--inputfield) !important;
 }
 .Personal-info {
-/* display: none; */
-display: grid;
-grid-template-columns: auto auto;
-gap: 40px;
+	/* display: none; */
+	display: grid;
+	grid-template-columns: auto auto;
+	gap: 40px;
 }
 .social-links {
-    display: none;
+	display: none;
 }
-.life-skills{
-    display: none;
+.life-skills {
+	display: none;
 }
-.skills{
-    display: none;
+.skills {
+	display: none;
 }
-.projects{
-    display: none;
+.projects {
+	display: none;
 }
-.form-group>*{
-    padding: 10px;
+.form-group > * {
+	padding: 10px;
 }
-.btn{
-    margin: 20px ;
-    background-color: var(--background-color);
-    border-radius: 10px;
-    color: var(--text-color);
+.btn {
+	margin: 20px;
+	background-color: var(--background-color);
+	border-radius: 10px;
+	color: var(--text-color);
 }
-.disabled{
-    background-color: #f7f7f7 !important;
-    color: #000000 !important;
+.disabled {
+	background-color: #f7f7f7 !important;
+	color: #000000 !important;
 }
 .info {
-    margin: 30px;
+	margin: 30px;
 }
 .text-primary {
-    color: var() !important;
+	color: var() !important;
 }
-.personal{
-    display: flex;
-    align-items: center;
-margin-left: 30px;
+.personal {
+	display: flex;
+	align-items: center;
+	margin-left: 30px;
 }
 textarea {
-border-radius: 10px;}
+	border-radius: 10px;
+}
 
 .material-symbols-rounded {
-   font-size: 40px !important;
-   color: var(--text-color);
-  font-variation-settings:
-  'FILL' 0,
-  'wght' 300,
-  'GRAD' 900,
-  'opsz' 24
+	font-size: 40px !important;
+	color: var(--text-color);
+	font-variation-settings: "FILL" 0, "wght" 300, "GRAD" 900, "opsz" 24;
 }
 .fill {
-   font-size: 40px !important;
-   color: var(--text-color);
-  font-variation-settings:
-  'FILL' 1,
-  'wght' 300,
-  'GRAD' 900,
-  'opsz' 24
+	font-size: 40px !important;
+	color: var(--text-color);
+	font-variation-settings: "FILL" 1, "wght" 300, "GRAD" 900, "opsz" 24;
 }
 
-.main-box,.box-1{
-    box-shadow: #695b5b 0px 0px 10px ;
-
+.main-box,
+.box-1 {
+	box-shadow: #695b5b 0px 0px 10px;
 }
 @media only screen and (max-width: 767px) {
-   
-   .box-2{
-    display: none;
-   }
- 
-   .col-4{
-    display: none;
-   }
-  }
-  
+	.box-2 {
+		display: none;
+	}
+
+	.col-4 {
+		display: none;
+	}
+}
+body.offline input,
+body.offline button[type="submit"],
+body.offline .step-submit {
+	opacity: 0.7;
+}
+
+body.offline::after {
+	content: "";
+	position: fixed;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	height: 5px;
+	background-color: #ff5722;
+	z-index: 9999;
+}
+
+/* PWA install button */
+#installPrompt {
+	animation: slideIn 0.3s ease-out;
+}
+
+@keyframes slideIn {
+	from {
+		transform: translateY(100px);
+		opacity: 0;
+	}
+	to {
+		transform: translateY(0);
+		opacity: 1;
+	}
+}
+
+/* Add responsive improvements for PWA experience */
+@media (max-width: 576px) {
+	.main-box {
+		margin: 0;
+		padding: 10px;
+	}
+
+	.Personal-info {
+		grid-template-columns: 1fr;
+		gap: 20px;
+	}
+
+	.form-group > * {
+		padding: 8px;
+	}
+
+	.btn {
+		margin: 10px 5px;
+	}
+}
+
+/* Make sure tap highlights are visible on mobile */
+a,
+button,
+input[type="button"],
+input[type="submit"] {
+	-webkit-tap-highlight-color: rgba(0, 0, 0, 0.1);
+}
+
+/* Improved focus states for accessibility */
+input:focus,
+textarea:focus,
+button:focus {
+	outline: 2px solid #007bff;
+	outline-offset: 2px;
+}
