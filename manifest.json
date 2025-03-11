@@ -2,7 +2,10 @@
 	"name": "Resume Builder",
 	"short_name": "ResumeBuilder",
 	"description": "Create professional resumes with ease",
-	"start_url": "/index.html",
+	"start_url": "/Resume-builder/",
+	"favicon": "favicon.ico",
+	"lang": "en",
+
 	"display": "standalone",
 	"background_color": "#feefb6",
 	"theme_color": "#feefb6",
