@@ -8,6 +8,7 @@ const urlsToCache = [
 	"/index.css",
 	"/script.js",
 	"/randomscript.js",
+	"/manifest.json",
 	"/template/template1.html",
 	"/template/template2.html",
 	"/template/template2.css",
