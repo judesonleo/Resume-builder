@@ -3,7 +3,6 @@
 	"short_name": "ResumeBuilder",
 	"description": "Create professional resumes with ease",
 	"start_url": "/Resume-builder/",
-	"favicon": "favicon.ico",
 	"lang": "en",
 
 	"display": "standalone",
